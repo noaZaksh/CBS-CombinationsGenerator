@@ -1,0 +1,13 @@
+<main>
+  <h1>מחולל הקומבינציות</h1>
+
+  @if (state.error()) {
+    <p class="error">{{ state.error() }}</p>
+  }
+
+  @if (state.screen() === 'start') {
+    <app-start-screen />
+  } @else {
+    <app-generator-screen />
+  }
+</main>

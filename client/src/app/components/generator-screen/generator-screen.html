@@ -1,0 +1,9 @@
+<section class="card">
+  <app-total-count [n]="state.n()!" [totalText]="state.totalCountText()" />
+
+  @if (state.screen() === 'all') {
+    <app-all-view />
+  } @else {
+    <app-single-view />
+  }
+</section>

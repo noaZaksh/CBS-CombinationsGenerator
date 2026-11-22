@@ -1,0 +1,7 @@
+<ul class="list">
+  @for (item of items(); track item.number) {
+    <li>
+      קומבינציה מספר {{ item.number }} – <bdi dir="ltr">{{ format(item.combination) }}</bdi>
+    </li>
+  }
+</ul>

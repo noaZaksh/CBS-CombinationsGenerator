@@ -1,0 +1,99 @@
+/* Basic styling only, as the assignment allows. */
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f5f7;
+  color: #222;
+}
+
+main {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+
+h1 {
+  margin-top: 0;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.row,
+.buttons,
+.pager,
+.jump {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  margin: 12px 0;
+}
+
+button {
+  padding: 6px 14px;
+  border: 1px solid #1f6feb;
+  background: #1f6feb;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+button.page-number {
+  background: #fff;
+  color: #1f6feb;
+}
+
+button.page-number.active {
+  background: #1f6feb;
+  color: #fff;
+}
+
+input {
+  padding: 6px 8px;
+  font-size: 14px;
+  width: 120px;
+}
+
+.total {
+  font-size: 18px;
+}
+
+.combination {
+  font-size: 18px;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.list li {
+  padding: 4px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.page-info {
+  color: #555;
+  margin: 4px 0;
+}
+
+.message {
+  color: #b35900;
+  font-weight: bold;
+}
+
+.error {
+  color: #c62828;
+}

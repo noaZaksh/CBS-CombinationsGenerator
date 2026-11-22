@@ -1,0 +1,31 @@
+# ============ .NET (server) ============
+bin/
+obj/
+*.user
+*.suo
+*.rsuser
+.vs/
+TestResults/
+*.nupkg
+
+# ============ Angular (client) ============
+node_modules/
+dist/
+out-tsc/
+.angular/
+coverage/
+npm-debug.log
+yarn-error.log
+
+# ============ IDEs ============
+.idea/
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.swp
+
+# ============ System files ============
+.DS_Store
+Thumbs.db

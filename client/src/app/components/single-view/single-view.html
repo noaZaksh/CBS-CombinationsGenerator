@@ -1,0 +1,15 @@
+<div class="buttons">
+  <button type="button" (click)="state.reset()" [disabled]="state.loading()">איפוס</button>
+  <button type="button" (click)="state.next()" [disabled]="state.loading()">הבא</button>
+  <button type="button" (click)="state.showAll()" [disabled]="state.loading()">כל הקומבינציות</button>
+</div>
+
+@if (state.current(); as current) {
+  <p class="combination">
+    קומבינציה מספר {{ current.number }} – <bdi dir="ltr">{{ format(current.combination) }}</bdi>
+  </p>
+}
+
+@if (state.message()) {
+  <p class="message">{{ state.message() }}</p>
+}

@@ -1,0 +1,20 @@
+<form class="card" (ngSubmit)="submit()">
+  <label for="n">הזינו את n (מספר שלם בין {{ minN }} ל-{{ maxN }}):</label>
+  <div class="row">
+    <input
+      id="n"
+      name="n"
+      type="number"
+      [min]="minN"
+      [max]="maxN"
+      step="1"
+      [ngModel]="value()"
+      (ngModelChange)="value.set($event)"
+      autofocus
+    />
+    <button type="submit" [disabled]="state.loading()">אישור</button>
+  </div>
+  @if (validationError()) {
+    <p class="error">{{ validationError() }}</p>
+  }
+</form>

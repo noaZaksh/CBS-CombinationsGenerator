@@ -1,0 +1,37 @@
+<nav class="pager" dir="rtl">
+  <button type="button" (click)="first()" [disabled]="disabled() || isFirst()">דף ראשון</button>
+  <button type="button" (click)="previous()" [disabled]="disabled() || isFirst()">דף קודם</button>
+
+  @for (page of pageNumbers(); track page) {
+    <button
+      type="button"
+      class="page-number"
+      [class.active]="page === currentPage()"
+      (click)="goTo(page)"
+      [disabled]="disabled()"
+    >
+      {{ page }}
+    </button>
+  }
+
+  <button type="button" (click)="next()" [disabled]="disabled() || isLast()">דף הבא</button>
+  <button type="button" (click)="last()" [disabled]="disabled() || isLast()">דף אחרון</button>
+</nav>
+
+<p class="page-info">דף {{ currentPage() }} מתוך {{ totalPages() }}</p>
+
+<form class="jump" (submit)="$event.preventDefault(); jump()">
+  <label for="jump-to">קפיצה לדף:</label>
+  <input
+    id="jump-to"
+    type="text"
+    inputmode="numeric"
+    dir="ltr"
+    [value]="jumpText()"
+    (input)="jumpText.set($any($event.target).value)"
+  />
+  <button type="submit" [disabled]="disabled()">עבור</button>
+</form>
+@if (jumpError()) {
+  <p class="error">{{ jumpError() }}</p>
+}
